@@ -1,9 +1,20 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { PlayerContext } from "./PlayerContext";
 const Player = () => {
-  const { seekBar, seekBg, playStatus, play, pause, track, time } =
-    useContext(PlayerContext);
+  const {
+    seekBar,
+    seekBg,
+    playStatus,
+    play,
+    pause,
+    track,
+    time,
+    previous,
+    next,
+    seekSong,
+  } = useContext(PlayerContext);
+
   return (
     <>
       <div className="h-[10%] bg-black flex justify-between text-white pl-4">
@@ -23,6 +34,7 @@ const Player = () => {
                 alt=""
               />
               <img
+                onClick={previous}
                 className="w-5 cursor-pointer"
                 src={assets.prev_icon}
                 alt=""
@@ -43,6 +55,7 @@ const Player = () => {
                 />
               )}
               <img
+                onClick={next}
                 className="w-5 cursor-pointer"
                 src={assets.next_icon}
                 alt=""
@@ -59,6 +72,7 @@ const Player = () => {
               </p>
               <div
                 ref={seekBg}
+                onClick={seekSong}
                 className="w-[60vw] max-w-[500px] bg-gray-300 rounded-full cursor-pointer"
               >
                 <hr

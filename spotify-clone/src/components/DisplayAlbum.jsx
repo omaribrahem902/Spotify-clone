@@ -1,9 +1,12 @@
 import { useParams } from "react-router-dom";
 import { albumsData, assets, songsData } from "../assets/assets";
 import SongDetails from "./SongDetails";
+import { useContext } from "react";
+import { PlayerContext } from "./PlayerContext";
 const DisplayAlbum = () => {
   const { id } = useParams();
   const albumData = albumsData[id];
+  const { playWithId } = useContext(PlayerContext);
   return (
     <>
       <div className="max-h-[80%]">
@@ -42,6 +45,7 @@ const DisplayAlbum = () => {
               image={item.image}
               index={index}
               duration={item.duration}
+              playWithId={playWithId}
               id={id}
               key={index}
             />
