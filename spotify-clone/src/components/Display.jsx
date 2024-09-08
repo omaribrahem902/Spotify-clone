@@ -20,7 +20,10 @@ const Display = () => {
   });
   return (
     <>
-      <div ref={ref} className="w-[80%] px-2  flex flex-col bg-[#121212]">
+      <div
+        ref={ref}
+        className=" w-[100%] h-[100%] sm:w-[80%] px-2  flex flex-col bg-[#121212]"
+      >
         <Navbar />
         <Routes>
           <Route path="/" element={<Displayhome />} />

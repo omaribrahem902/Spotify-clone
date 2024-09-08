@@ -17,7 +17,7 @@ const Player = () => {
 
   return (
     <>
-      <div className="h-[10%] bg-black flex justify-between text-white pl-4">
+      <div className="h-[10%] bg-black flex justify-between text-white sm:pl-4">
         <div className="hidden w-[20%] lg:flex items-center gap-4">
           <img className="w-12" src={track.image} alt="" />
           <div>
@@ -25,8 +25,8 @@ const Player = () => {
             <p>{track.desc.slice(0, 12)}</p>
           </div>
         </div>
-        <div className="w-[84%] bg-[#121212] flex justify-between items-center px-4">
-          <div className="w-fit flex flex-col py-2 px-1">
+        <div className="w-[100%] sm:w-[84%] bg-[#121212] flex justify-between items-center px-2 sm:px-4">
+          <div className="w-[100%] sm:w-fit flex flex-col py-2 px-1">
             <div className="flex gap-5 justify-center items-center">
               <img
                 className="w-5 cursor-pointer"

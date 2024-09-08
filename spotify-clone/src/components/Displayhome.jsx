@@ -4,8 +4,8 @@ import Songsitem from "./Songsitem";
 const Displayhome = () => {
   return (
     <>
-      <h1 className="text-white font-bold ml-5 text-2xl">Featured Charts</h1>
-      <div className="p-5  text-white overflow-auto">
+      <div className="p-2 sm:p-5  text-white overflow-auto">
+        <h1 className="text-white font-bold mb-4 text-2xl">Featured Charts</h1>
         <div className="flex overflow-auto">
           {albumsData.map((item, index) => (
             <Albumitem

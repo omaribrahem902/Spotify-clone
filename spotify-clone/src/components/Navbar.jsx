@@ -21,8 +21,8 @@ const Navbar = () => {
             />
           </div>
           <div className="flex items-center gap-4">
-            <button className="button">Explore Premium</button>
-            <p className="bg-black text-white py-1 px-3 rounded-2xl text-[15px] cursor-pointer">
+            <button className="mobile-button sm:button">Explore Premium</button>
+            <p className="bg-black text-white py-1 px-3 rounded-full text-[12px] sm:text-[15px] cursor-pointer">
               Install App
             </p>
             <p className="bg-green-400 cursor-pointer text-black w-7 h-7 rounded-full flex justify-center items-center font-bold">

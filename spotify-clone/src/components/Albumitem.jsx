@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Albumitem = ({ image, name, desc, id }) => {
   const navigate = useNavigate();
   return (
